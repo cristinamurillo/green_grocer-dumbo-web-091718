@@ -1,5 +1,5 @@
 require_relative 'grocer'
-
+require 'pry'
 def items
 	[
 		{"AVOCADO" => {:price => 3.00, :clearance => true}},
@@ -13,6 +13,7 @@ def items
 		{"BEETS" => {:price => 2.50, :clearance => false}}
 	]
 end
+
 
 def coupons
 	[

